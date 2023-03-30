@@ -25,7 +25,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_enemy_sintaxe",
+    "path": "sprites/spr_enemy_sintaxe/spr_enemy_sintaxe.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

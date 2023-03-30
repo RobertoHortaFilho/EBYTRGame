@@ -18,3 +18,11 @@ function scr_player_colision_move(){
 		}
 	}
 }
+
+function scr_player_change_sprite() {
+	if (hspd != 0) {
+		sprite = spr_player_walk
+	} else {
+		sprite  = spr_player_idle
+	}
+}

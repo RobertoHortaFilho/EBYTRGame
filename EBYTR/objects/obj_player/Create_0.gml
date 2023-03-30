@@ -9,10 +9,11 @@ down = false
 jump = false
 #endregion
 
+side = 1
+sprite = spr_player_walk
+
 hspd = 0
 vspd = 0
 max_spd = 2
-jump_height = 5
-grv = 0.02
-grv_base = 0.02
-grv_max = .6
+jump_height = 5.8
+grv = 0.2
