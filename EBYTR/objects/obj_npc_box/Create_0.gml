@@ -7,7 +7,10 @@ box = spr_npc_box
 name = "Setinha"
 
 pharase = [
-	"Ola recruta, meu nome é Setinha, sou o responsavel pelo seu treinameto para se tornar um verdadeiro cacador de BUGS"
+	"Olá recruta, meu nome é Setinha, sou o responsável pelo seu treinameto para se tornar um verdadeiro caçador de BUGS"
 ]
+
+//in_animation = false
+
 selected_pharase = pharase[0]
 letter_index = 0
