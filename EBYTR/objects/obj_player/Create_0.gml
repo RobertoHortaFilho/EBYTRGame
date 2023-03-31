@@ -9,8 +9,10 @@ down = false
 jump = false
 #endregion
 
+state = states.idle
+
 side = 1
-sprite = spr_player_walk
+sprite = spr_player_idle
 
 hspd = 0
 vspd = 0

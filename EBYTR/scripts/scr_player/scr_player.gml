@@ -1,5 +1,13 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+
+enum states {
+	idle,
+	walk,
+	attack,
+	take_damage
+}
+
 function scr_player_colision_move(){
 	repeat(abs(hspd)){
 		if (!place_meeting(x + sign(hspd), y, obj_solid)) {
@@ -20,9 +28,29 @@ function scr_player_colision_move(){
 }
 
 function scr_player_change_sprite() {
-	if (hspd != 0) {
-		sprite = spr_player_walk
+	switch state {
+		case states.idle:
+			sprite = spr_player_idle
+		break;
+		case states.walk:
+			sprite = spr_player_walk
+		break;
+		case states.attack:
+			if (sprite != spr_player_attack) image_index = 0;
+			sprite = spr_player_attack
+		break;
+	}
+}
+
+function scr_player_jump(in_floor, release_jump) {
+	if (in_floor) {
+		vspd = 0
+		if (jump) {
+			vspd = -jump_height 
+		}
 	} else {
-		sprite  = spr_player_idle
+		if (release_jump and vspd < 0) {
+			vspd = vspd / 2
+		}
 	}
 }
