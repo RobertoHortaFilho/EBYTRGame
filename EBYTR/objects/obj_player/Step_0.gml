@@ -53,7 +53,7 @@ switch state {
 			hspd = 2 * side
 			// create attack
 			if (!alarm[0]) {
-				alarm[0] = room_speed
+				alarm[0] = room_speed/2
 				instance_create_layer(x+ (6 * side), y - 20, "attacks", obj_player_attack,
 				{
 					spd: 6,

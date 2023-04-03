@@ -1,6 +1,8 @@
  /// @description Insert description here
 // You can write your code in this editor
 
+scr_ncp_conversation()
+
 if (keyboard_check_pressed(ord("R"))) {
 	letter_index = 0
 }
