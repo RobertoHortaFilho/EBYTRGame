@@ -45,6 +45,7 @@ switch state {
 		break;
 	case states.attack:
 		hspd = 0
+		src_global_gravity()
 		
 		var frame_rate = (room_speed / sprite_get_speed(sprite)) / sprite_get_number(sprite)
 		var next_frame_number = image_index + frame_rate
@@ -73,4 +74,4 @@ show_debug_message(image_speed)
 
 vspd += grv
 scr_player_change_sprite()
-scr_player_colision_move()
+scr_colision_move()

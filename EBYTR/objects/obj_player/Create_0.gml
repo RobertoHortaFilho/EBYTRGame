@@ -18,4 +18,4 @@ hspd = 0
 vspd = 0
 max_spd = 2
 jump_height = 5.8
-grv = 0.2
+grv = global.grv

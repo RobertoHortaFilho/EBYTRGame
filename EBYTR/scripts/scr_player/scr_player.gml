@@ -1,14 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 
-enum states {
-	idle,
-	walk,
-	attack,
-	take_damage
-}
-
-function scr_player_colision_move(){
+function scr_colision_move(){
 	repeat(abs(hspd)){
 		if (!place_meeting(x + sign(hspd), y, obj_solid)) {
 			x += sign(hspd)
