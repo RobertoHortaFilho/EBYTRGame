@@ -1,13 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-top = keyboard_check(ord("W"))
-down = keyboard_check(ord("S"))
-right = keyboard_check(ord("A"))
-left = keyboard_check(ord("D"))
-jump = keyboard_check_pressed(vk_space)
-attack = keyboard_check_pressed(ord("Q"))
-var release_jump = keyboard_check_released(vk_space)
+top = keyboard_check(vk_up)
+down = keyboard_check(vk_down)
+right = keyboard_check(vk_left)
+left = keyboard_check(vk_right)
+jump = keyboard_check_pressed(ord("Z"))
+attack = keyboard_check_pressed(ord("X"))
+var release_jump = keyboard_check_released(ord("Z"))
 var in_floor = place_meeting(x, y + 1, obj_solid)
 
 switch state {

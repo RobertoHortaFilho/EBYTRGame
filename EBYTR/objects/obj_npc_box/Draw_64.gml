@@ -1,15 +1,17 @@
  /// @description Insert description here
 // You can write your code in this editor
 
-scr_ncp_conversation()
-
-if (keyboard_check_pressed(ord("R"))) {
-	letter_index = 0
+if (letter_index > 10) {
+	scr_ncp_conversation()
 }
 
-if (keyboard_check_pressed(ord("E"))) {
-	letter_index = string_length(selected_pharase)
-}
+//if (keyboard_check_pressed(ord("R"))) {
+//	letter_index = 0
+//}
+
+//if (keyboard_check_pressed(ord("E"))) {
+//	letter_index = string_length(selected_pharase)
+//}
 
 if ( letter_index < string_length(selected_pharase)) {
 	letter_index += .4
@@ -24,7 +26,9 @@ draw_sprite_ext(face, image_index, 0, 0, scale, scale, 0, -1, 1)
 var sep = 20
 draw_set_color(c_white)
 draw_set_font(fnt_pixel_title)
-draw_text_ext(440, 54, string_upper(name), sep, 15)
+draw_set_halign(fa_center)
+draw_text_ext(470, 54, string_upper(name), sep, 300)
+draw_set_halign(fa_left)
 draw_set_font(fnt_pixel)
 
 var text_x = 222

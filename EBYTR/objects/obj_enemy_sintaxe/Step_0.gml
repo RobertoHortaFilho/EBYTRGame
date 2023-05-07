@@ -10,6 +10,8 @@ switch (state) {
 	case states.walk:
 		scr_enemy_slip()
 		hspd = spd * direct
+		image_xscale = direct * -1
+		instance_create_layer(x + (6 * image_xscale), y, "Enemys", obj_enemy_sintexe_rail)
 		break;
 	case states.take_damage:
 		if (take_dmg_ctrl) {
@@ -20,8 +22,9 @@ switch (state) {
 		hspd = knock_spd * knockback
 		break;
 	case states.death:
-		// animaçao para morrer
-		instance_destroy()
+		if sprite_index != spr_enemy_sintexe_death {
+			sprite_index = spr_enemy_sintexe_death
+		}
 		break;
 }
 
